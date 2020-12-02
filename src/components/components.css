@@ -1,0 +1,295 @@
+/*
+===============
+General Styles
+===============
+*/
+
+*, ::after, ::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    height: auto;
+    width: 100%;
+    background-image: url(../components/img/midCenturyBuild.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin-bottom: 60px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    clear: both;
+}
+
+li {
+    font-family: 'Roboto Slab', serif;
+}
+
+.page-header {
+    background-color: rgb(131, 131, 131);
+}
+
+#header-line {
+    box-shadow: 0 2px 4px grey;
+    background-color: rgb(176,158,197);
+}
+
+#footer-line {
+    box-shadow: 0 -2px 4px grey;
+    background-color: rgb(176,158,197);
+}
+
+.page-footer {
+    background-color: rgb(131, 131, 131);
+    color: white;
+    font-family: 'Roboto Slab', serif;
+}
+
+.about {
+    background: white;
+    width: auto;
+    height: auto;
+    padding: auto;
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 1px;
+    border-color: rgb(131, 131, 131);
+    font-family: 'Roboto Slab', serif;
+    box-shadow: 2px 2px 4px grey;
+}
+
+.h1 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 20px;
+}
+
+.nav-button {
+    color: white;
+    text-decoration: none;
+    font-family: 'Roboto Slab', serif;
+}
+
+/*
+===============
+Bounce Effect
+===============
+*/
+
+.bounce-right {
+    -webkit-animation: bounceInRight;
+    animation: bounceInRight;
+    animation-name: bounceInRight;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes bounceInRight {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(2000px);
+    }
+    60% {
+        opacity: 1;
+        -webkit-transform: translateX(-30px);
+    }
+    80% {
+        -webkit-transform: translateX(10px);
+    }
+    100% {
+        -webkit-transform: translateX(0);
+    }
+}
+
+@keyframes bounceInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(2000px);
+    }
+    60% {
+        opacity: 1;
+        transform: translateX(-30px);
+    }
+    80% {
+        transform: translateX(10px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.bounce-left {
+    -webkit-animation: bounceInLeft;
+    animation: bounceInLeft;
+    animation-name: bounceInLeft;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+  
+@-webkit-keyframes bounceInLeft {
+    0% {
+       opacity: 0;
+       -webkit-transform: translateX(-2000px);
+    }
+    60% {
+       opacity: 1;
+       -webkit-transform: translateX(30px);
+    }
+    80% {
+       -webkit-transform: translateX(-10px);
+    }
+    100% {
+       -webkit-transform: translateX(0);
+    }
+}
+ 
+@keyframes bounceInLeft {
+    0% {
+       opacity: 0;
+       transform: translateX(-2000px);
+    }
+    60% {
+       opacity: 1;
+       transform: translateX(30px);
+    }
+    80% {
+       transform: translateX(-10px);
+    }
+    100% {
+       transform: translateX(0);
+    }
+}
+
+
+/*
+==================
+Home Page Styling
+==================
+*/
+
+.img-dec {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/*
+==================
+Portfolio Styling
+==================
+*/
+
+.contain {
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0px;
+    right: 0;
+    height: 100%;
+    transition: .5s ease;
+}
+
+.contain:hover .overlay,
+.contain.hasHover .overlay {
+   background-color: rgba(128,128,128,0.8);
+   border-radius: 10px;
+}
+
+.contain:hover .text,
+.contain.hasHover .text {
+    opacity: 1;
+}
+
+.margin-divider {
+    margin-bottom: 20px !important;
+}
+
+.about-portfolio {
+    width: auto;
+    height: auto;
+    padding: auto;
+    box-shadow: 2px 2px 4px grey;
+    border-radius: 10px;
+}
+
+.img-style {
+    border-radius: 8px;
+    border-style: solid;
+    border-color: rgb(131, 131, 131);
+    border-width:1px;
+}
+
+.text {
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    opacity: 0;
+    transition: .5s ease;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+/*
+================
+Contact Styling
+================
+*/
+
+.button-color {
+    background-color: rgb(176,158,197);
+}
+
+/*
+===================
+Responsive Styling
+===================
+*/
+
+@media only screen and (max-width: 992px) {
+  
+    img {
+        height: 115px;
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+    img {
+        height: 110px;
+    }
+
+    
+}
+@media only screen and (max-width: 576px) {
+    
+    img {
+        height: 100px;
+    }
+    
+    .about, .about-portfolio {
+        width: 100%;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+}
